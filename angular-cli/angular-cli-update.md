@@ -4,21 +4,18 @@
 
 [**angular-cli**](https://github.com/angular/angular-cli)는 angular 2 프로젝트 생성 및 개발에 기반이 될 수 있는 **커맨드 라인 인터페이스**입니다.
 
-최신 angular-cli버전은 angular-cli@1.0.0-beta.11-wepack.2 입니다.
+최신 angular-cli버전은 angular-cli@1.0.0-beta.11-webpack.2 입니다.
 
 beta.10 에서는 RC4가 반영되어 동작하였으며 beta.11 부터는 RC5가 반영되었습니다.
 
 ### webpack.2 버전으로 업데이트시 발생하는 문제 ###
 
-angular 2가 RC5로 업데이트되면서 angular-cli가 webpack 기반으로 변경되었습니다.
+angular 2가 RC5로 업데이트되면서 angular-CLI가 web pack 기반으로 변경되었습니다. beta. 11-web pack 업데이트되면서 angular-CLI 설치와 운영을 위해 버전 업데이트가 필요합니다. 
 
-변경과정에서 설치와 운영을 위해 필요한 Node 버전은 4 이상이 필요하며 npm은 3 버전 이상이 필요합니다. 
+- Node 버전은 4 이상이 필요
+- npm은 3 버전 이상이 필요
 
-여기서 유의할 점은 npm 버전입니다. npm버전은 1.0.0.beta.11-webpack.x 이후부터는 2 버전이 아닌 3 버전 이상으로 설치되어야 합니다. 
-
-만약 npm 2.x 버전으로 1.0.0.beta.11-webpack.x 설치를 진행한다면 설치가 원만히 진행되지 않습니다. 
-
-만약 설치가 원만히 진행되지 않는다면 npm을 업데이트해 주어야 합니다. 
+여기서 유의할 점은 npm 버전입니다. npm버전은 1.0.0.beta.11-webpack.x 이후부터는 2 버전이 아닌 3 버전 이상으로 설치되어야 합니다.  만약 npm 2.x 버전으로 1.0.0.beta.11-webpack.x 설치를 진행한다면 설치가 원만히 진행되지 않습니다. 만약 설치가 원만히 진행되지 않는다면 npm을 업데이트해 주어야 합니다. 
 
 ### npm 업데이트 ###
 
