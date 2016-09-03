@@ -539,7 +539,7 @@ Overall Structural Guidelines
 
 ### Input Output 장식자에 대해 이름 변경을 하지 않습니다 ###
 
-비추천 : 이름을 renaming 함으로서 export시 혼동을 줄 수 있다.
+비추천 : 이름을 renaming 함으로서 export시 혼동을 줄 수 있습니다.
 
 	/* 비추천 */
 	@Component({
