@@ -2,7 +2,7 @@
 
 > 마지막 수저일 : 2016-09-03 (v0.1)
 
-본 문서는 [Angular 2 Korea User Group](https://www.facebook.com/groups/angular2korea)이 제공하는 스타일 가이드에 대한 요약본입니다. 본 문서의 내용의 기준은 [Angular 스타일 가이드 문서](https://angular.io/styleguide)와 [마이크로스프트 타입스크립트 컨벤션 문서](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines)입니다. 본 스타일 가이드는 Angular 버전 업데이트를 고려하여 업데이트할 예정입니다.
+본 문서는 [Angular 2 Korea User Group](https://www.facebook.com/groups/angular2korea)이 제공하는 스타일 가이드에 대한 요약본입니다. 본 문서의 내용의 기준은 [Angular 스타일 가이드 문서](https://angular.io/styleguide)와 [마이크로스프트 타입스크립트 컨벤션 문서](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines)입니다. 본 스타일 가이드는 Angular 버전 업데이트를 고려하여 지속적으로 업데이트할 예정입니다.
 
 
 ## 파일분할 ##
