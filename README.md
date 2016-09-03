@@ -1,7 +1,7 @@
 # 개발노트 #
 > 2016-08-22 (문서 준비중)
 
-안녕하세요. 이 저장소는 [**Angular 2 Korea User Group**](https://www.facebook.com/groups/angular2korea/)에 올라온 링크나 정보를 요약하기 위한 노트입니다.
+안녕하세요. 이 저장소는 [**Angular 2 Korea User Group**](https://www.facebook.com/groups/angular2korea/)에 올라온 링크 혹은 Angular 2에 관한 중요 정보를 요약하기 위한 저장소 입니다.
 
 ## 추가규칙 ##
 
