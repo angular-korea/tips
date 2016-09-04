@@ -1,6 +1,6 @@
 # Angular 2 스타일 가이드 #
 
-> 마지막 수저일 : 2016-09-03 (v0.1)
+> 마지막 수정일 : 2016-09-04 (v2)
 
 본 문서는 [Angular 2 Korea User Group](https://www.facebook.com/groups/angular2korea)이 제공하는 스타일 가이드에 대한 요약본입니다. 본 문서의 내용의 기준은 [Angular 스타일 가이드 문서](https://angular.io/styleguide)와 [마이크로스프트 타입스크립트 컨벤션 문서](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines)입니다. 본 스타일 가이드는 Angular 버전 업데이트를 고려하여 지속적으로 업데이트할 예정입니다.
 
@@ -900,4 +900,110 @@ on은 생략합니다.
 	  ngOnInit() {
 	    console.log('The component is initialized');
 	  }
+	}
+
+
+## 타입스크립트 ##
+
+
+### 클래스선언 ###
+
+추천 : 클래스이름은 첫글자가 대문자가 오도록 합니다.(PascalCase)
+
+	class MyModule{
+	    str: number;
+	    hello(){ }
+	}
+
+### 인터페이스 선언 ###
+
+비추천 : 인터페이스 일때 I를 쓰지 않습니다.
+
+	interface IAnimal{
+	}
+
+
+추천 : 인터페이스 이름은 첫글자가 대문자가 오도록 합니다. (PascalCase)
+
+	interface Animal{
+	}
+
+### 함수선언 ###
+
+추천 : 함수 선언은 낙타표기법을 이용합니다.
+
+	var fooVar;
+	function barFunc() { }
+
+
+비추천
+
+	var FooVar;
+	function BarFunc() { }	
+
+### 네임스페이스 선언 ###
+
+비추천
+
+	namespace animal{
+
+	}
+
+추천 : 네임스페이스 첫글자는 대문자가 오도록 합니다.
+	
+	namespace Animal{
+	}
+
+
+### enum ###
+
+추천 : 첫글자가 대문자가 오도록 합니다.
+
+	enum Color {
+	}
+
+
+추천 : 멤버가 추가 될때도 대문자가 오도록 합니다.
+
+	enum Color {
+	    Red
+	}
+
+
+### 변수선언 ###
+
+추천 : 카멜 표기법을 이용합니다.
+
+	var myVar;
+
+비추천
+
+	var MyVar;
+
+
+### null 사용금지 ###
+
+추천 : undefined를 사용합니다.
+
+	return undefined;
+
+
+비추천 : null을 사용하지 않습니다.
+
+	return null;
+
+
+### for문 ###
+
+추천 : 블록스코프가 적용되도록 let을 사용합니다.
+
+	for(let i=0;i<5;i++){
+	
+	}
+
+
+비추천 : var를 이용하면 블록스코프가 적용되지 않습니다.
+
+	for(var i=0;i<5;i++){
+	
 	}
