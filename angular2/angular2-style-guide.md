@@ -13,7 +13,7 @@
 
 ### 컴포넌트 ###
 
-[추천](https://github.com/angular/angular-ja/blob/master/public/docs/_examples/style-guide/ts/02-07/app/heroes/hero.component.ts)
+[추천](https://github.com/angular/angular-ja/blob/master/public/docs/_examples/style-guide/ts/02-07/app/heroes/hero.component.ts) : 탬플릿을 추가합니다.
 
 	import { Component } from '@angular/core';
 	
@@ -24,7 +24,7 @@
 	})
 	export class HeroComponent {}
 	
-비추천
+비추천 : 탬플릿이 누락되지 않도록 합니다.
 
 	import { Component } from '@angular/core';
 	
@@ -37,9 +37,7 @@
 
 
 
-[추천](https://github.com/angular/angular-ja/blob/master/public/docs/_examples/style-guide/ts/05-17/app/heroes/hero-list/hero-list.component.ts)
-
-탬플릿에 로직을 두지 말고, 프리젠테이션에 로직을 둡니다.
+[추천](https://github.com/angular/angular-ja/blob/master/public/docs/_examples/style-guide/ts/05-17/app/heroes/hero-list/hero-list.component.ts) : avgPower() 함수와 같이 로직처럼를 컴포넌트 클래스 내에서 합니다.
 
 
 	import { Component } from '@angular/core';
@@ -76,9 +74,7 @@
 	}
 
 
-[비추천](https://github.com/angular/angular-ja/blob/master/public/docs/_examples/style-guide/ts/05-17/app/heroes/hero-list/hero-list.component.avoid.ts)
-
-탬플릿에 로직을 두지 않습니다.
+[비추천](https://github.com/angular/angular-ja/blob/master/public/docs/_examples/style-guide/ts/05-17/app/heroes/hero-list/hero-list.component.avoid.ts) : 연산로직을 탬플릿 내에 두지 않습니다.
 
 	import { Component } from '@angular/core';
 	
@@ -127,9 +123,7 @@
 
 ### 서비스 ###
 
-추천
-
-컴포넌트에 재사용 가능하도록 서비스에 로직을 둡니다.  서비스에 로직을 두면 로직이 독립되므로 테스트가 용이해 집니다. 그리고 서비스로 로직을 컴포넌트 외부로 독립함으로서 로직 의존성을 제거할 수 있습니다.
+추천 : 컴포넌트에 재사용 가능하도록 서비스에 로직을 둡니다.  서비스에 로직을 두면 로직이 독립되므로 테스트가 용이해 집니다. 그리고 서비스로 로직을 컴포넌트 외부로 독립함으로서 로직 의존성을 제거할 수 있습니다.
 
 	import { Component, OnInit } from '@angular/core';
 	import { Hero, HeroService } from '../shared';
@@ -150,9 +144,7 @@
 	  }
 	}
 
-비추천
-
-컴포넌트안에 로직을 두지 않습니다.
+비추천 : 컴포넌트 클래스 내에 공통 로직을 두지 않습니다.
 
 	import { OnInit } from '@angular/core';
 	import { Http, Response } from '@angular/http';
@@ -184,7 +176,7 @@
 
 
 
-추천
+추천 : 불러온 모델은 함수를 통해 초기화합니다.
 
 	import { Injectable } from '@angular/core';
 	
@@ -210,7 +202,7 @@
 	
 
 
-비추천
+비추천 : 불러온 모델에 대한 초기화를 생략하지 않습니다.
 
 
 	import { Injectable } from '@angular/core';
@@ -228,9 +220,7 @@
 
 ### 모델 ###
 
-
-
-[추천](https://github.com/angular/angular-ja/blob/master/public/docs/_examples/style-guide/ts/03-03/app/shared/hero.model.ts)
+[추천](https://github.com/angular/angular-ja/blob/master/public/docs/_examples/style-guide/ts/03-03/app/shared/hero.model.ts) : 모델은 클래스만으로 정의합니다.
 
 	// #docregion
 	// #docregion example
@@ -239,7 +229,7 @@
 	  power: string;
 	}
 
-[비추천](https://github.com/angular/angular-ja/blob/master/public/docs/_examples/style-guide/ts/03-03/app/shared/hero.model.avoid.ts)
+[비추천](https://github.com/angular/angular-ja/blob/master/public/docs/_examples/style-guide/ts/03-03/app/shared/hero.model.avoid.ts) : 모델 정의시 인터페이스를 사용하지 않습니다.
 
 	export interface IHello {
 	  name: string;
@@ -252,6 +242,8 @@
 	}
 
 ### 목 ###
+
+추천
 
 	import { Hero } from './hero.model';
 	export const HEROES: Hero[] = [
