@@ -1,9 +1,17 @@
 # Angular 2 스타일 가이드 #
 
-> 마지막 수정일 : 2016-09-04 (v2)
+> 마지막 수정일 : 2016-09-05 (v3)
 
 본 문서는 [Angular 2 Korea User Group](https://www.facebook.com/groups/angular2korea)이 제공하는 스타일 가이드에 대한 요약본입니다. 본 문서의 내용의 기준은 [Angular 스타일 가이드 문서](https://angular.io/styleguide)와 [마이크로스프트 타입스크립트 컨벤션 문서](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines)입니다. 본 스타일 가이드는 Angular 버전 업데이트를 고려하여 지속적으로 업데이트할 예정입니다.
 
+
+## 가이드 라인 규칙 ##
+
+가이드 라인 규칙은 총 3가지로 나누었습니다.
+
+- **추천** : 반드시 따라야 하는 가이드입니다.
+- **유의** : 가이드 라인을 충분히 이해한 상태에서, 사용해야할 특별한 이유가 있을때만 유의해서 사용합니다.
+- **비추천** : 사용하지 않아야할 비추천 예입니다.
 
 ## 구성요소에 따른 파일분할 ##
 
@@ -11,12 +19,13 @@
 	- 코딩시 유의사항을 중심으로 살펴봅니다.
 - 파일분할은 구성요소별로 분할하는 것을 원칙으로 합니다.
 
-### 컴포넌트 ###
+## 컴포넌트 ##
+
+### 탬플릿 사용 ###
 
 [추천](https://github.com/angular/angular-ja/blob/master/public/docs/_examples/style-guide/ts/02-07/app/heroes/hero.component.ts) : 탬플릿을 추가합니다.
 
 	import { Component } from '@angular/core';
-	
 
 	@Component({
 	  template: '<div>hero component</div>',	  
@@ -34,7 +43,35 @@
 	})
 	export class HeroComponent {}	
 
+### Input과 Output 장식자 ###
 
+추천 : @Input(), @Output() 장식자를 이용합니다.
+
+	@Component({
+	  selector: 'toh-hero-button',
+	  template: `<button>{{label}}</button>`
+	})
+	export class HeroButtonComponent {
+	  @Output() change = new EventEmitter<any>();
+	  @Input() label: string;
+	}
+
+비추천 : input, outputs 프로퍼티 사용은 추천하지 않습니다.
+
+	@Component({
+	  selector: 'toh-hero-button',
+	  template: `<button></button>`,
+	  inputs: [
+	    'label'
+	  ],
+	  outputs: [
+	    'change'
+	  ]
+	})
+	export class HeroButtonComponent {
+	  change = new EventEmitter<any>();
+	  label: string;
+	}
 
 
 [추천](https://github.com/angular/angular-ja/blob/master/public/docs/_examples/style-guide/ts/05-17/app/heroes/hero-list/hero-list.component.ts) : avgPower() 함수와 같이 로직처럼를 컴포넌트 클래스 내에서 합니다.
@@ -101,7 +138,7 @@
 
 
 
-### 모듈 ###
+## 모듈 ##
 
 	import { NgModule } from '@angular/core';
 	import { BrowserModule } from '@angular/platform-browser';
@@ -121,7 +158,7 @@
 	})
 	export class AppModule { }
 
-### 서비스 ###
+## 서비스 ##
 
 추천 : 컴포넌트에 재사용 가능하도록 서비스에 로직을 둡니다.  서비스에 로직을 두면 로직이 독립되므로 테스트가 용이해 집니다. 그리고 서비스로 로직을 컴포넌트 외부로 독립함으로서 로직 의존성을 제거할 수 있습니다.
 
@@ -218,7 +255,7 @@
 	// #enddocregion example
 
 
-### 모델 ###
+## 모델 ##
 
 [추천](https://github.com/angular/angular-ja/blob/master/public/docs/_examples/style-guide/ts/03-03/app/shared/hero.model.ts) : 모델은 클래스만으로 정의합니다.
 
@@ -241,9 +278,9 @@
 	  power: string;
 	}
 
-### 목 ###
+## 목 ##
 
-추천
+추천 : 목은 외부에 정의된 모델을 기반으로 합니다.
 
 	import { Hero } from './hero.model';
 	export const HEROES: Hero[] = [
@@ -254,9 +291,9 @@
 
 
 
-### 일반 파일이름 ###
+## 일반 파일이름 ##
 
-서비스, 지시자, 컴포넌트, 파이프, 모델에 대한 파일이름은 다음과 같이 정합니다.
+추천 : 서비스, 지시자, 컴포넌트, 파이프, 모델에 대한 파일이름은 첫번째 콤마 다음에 구체적인 이름 service, directive, component, pipe, model로 명시합니다.
 
 
 	hello.service.ts
@@ -265,18 +302,18 @@
 	hello.pipe.ts
 	hello.model.ts
 
-### 테스트 파일이름 ###
+## 테스트 파일이름 ##
 
-테스트 파일이름에는.ts 확장자 전에 spec을 붙여 줍니다.
+추천 : 테스트 파일이름에는.ts 확장자 전에 spec을 붙여 줍니다.
 
 	hello.service.spec.ts
 	hello.directive.spec.ts
 	hello.component.spec.ts
 	hello.pipe.spec.ts
 
-### 종단 대 종단 테스트 파일이름 ###
+## 종단 대 종단 테스트 파일이름 ##
 
-종단 대 종답(End to End) 테스트 파일 이름은 .e2e-spec을 붙여 줍니다.
+추천 : 종단 대 종답(End to End) 테스트 파일 이름은 .e2e-spec을 붙여 줍니다.
 
 	hello.e2e-spec.ts
 
