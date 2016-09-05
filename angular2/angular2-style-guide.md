@@ -74,7 +74,9 @@
 	}
 
 
-[추천](https://github.com/angular/angular-ja/blob/master/public/docs/_examples/style-guide/ts/05-17/app/heroes/hero-list/hero-list.component.ts) : avgPower() 함수와 같이 로직처럼를 컴포넌트 클래스 내에서 합니다.
+### 로직처리 ###
+
+[추천](https://github.com/angular/angular-ja/blob/master/public/docs/_examples/style-guide/ts/05-17/app/heroes/hero-list/hero-list.component.ts) : 탬플릿에 로직을 두기 보다 avgPower() 함수처럼 컴포넌트 클래스 내부 함수로 로직을 처리합니다.
 
 
 	import { Component } from '@angular/core';
