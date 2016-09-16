@@ -34,6 +34,8 @@
 
 ## Angular 2 영상 ##
 - [youtube 이번주 Angular 2 영상](https://www.youtube.com/results?q=angular+2&sp=CAESAggD)
+- [Angualr 2 for beginners Tutorial](https://www.youtube.com/watch?v=hXfigUyeHaY&list=PL6gx4Cwl9DGBYxWxJtLi8c6PGjNKGYGZZ)
+- [egghead.io의 Angular 2 컴포넌트](https://egghead.io/courses/building-angular-2-components)
 - [egghead.io의 angular 2 기초](https://egghead.io/courses/angular-2-fundamentals)
 
 
@@ -69,8 +71,9 @@
 - [Angular Augury](https://augury.angular.io/)
 	- 크롬을 위한 Angular 개발확장도구로 디버깅에 필요한 디버깅 특징을 제공함
 
+## 온라인 책 ##
 
-## 타입스크립트 ##
+- [angular 2 training book](https://angular-2-training-book.rangle.io/)
 - [타입스크립트 딥 다이브(외서)](https://basarat.gitbooks.io/typescript/content/)
 - [typescriptlang.org의 타입스크립트 튜토리얼](https://www.typescriptlang.org/docs/tutorial.html)
 - [서버사이드 랜더링, Angular Universal](https://github.com/angular/universal-starter)
@@ -81,6 +84,11 @@
 	- Angular 2와 React Native를 이용한 안드로이드 와 IOS개발
 - [https://www.nativescript.org/](https://www.nativescript.org/)
 - [http://ionicframework.com/](http://ionicframework.com/)
+
+
+## Angular 2 블로그 ##
+
+- [blog.angular-university.io](http://blog.angular-university.io)
 
 ## 데이터 라이브러리 ##
 
@@ -93,6 +101,11 @@ _ [meteor](http://www.angular-meteor.com/angular2)
 - [Angular 2](http://devdocs.io/angular~2.0_typescript)
 - [타입스크립트](http://devdocs.io/typescript)
 - [자바스크립트](http://devdocs.io/javascript)
+
+## Angular 컨퍼런스 ##
+
+- [angularconnect.com](http://angularconnect.com/)
+
 
 ## Angular 2 링크모음 ##
 
