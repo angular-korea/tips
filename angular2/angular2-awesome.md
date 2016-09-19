@@ -105,6 +105,7 @@ _ [meteor](http://www.angular-meteor.com/angular2)
 ## Angular 컨퍼런스 ##
 
 - [angularconnect.com](http://angularconnect.com/)
+- [ngeurope.org](https://ngeurope.org/)
 
 
 ## Angular 2 링크모음 ##

@@ -42,7 +42,11 @@ npm을 업데이트 해 주기 전에 먼저 자신의 npm 버전을 확인합�
 	npm uninstall -g angular-cli
 	npm cache clean
 
-여기서 [npm cache clean 명령어](https://docs.npmjs.com/cli/cache)는 캐시 폴더를 삭제해 주는 명령어입니다. 캐시 폴더는 % AppData%/Roaming/npm-cache 디렉터리에 위치해 있습니다. 캐시 폴더의 목적은 다음에 패키지를 설치해주게 될 때 네트워크가 필요 없이 npm 패키지를 설치해주게 해주는 용도입니다. 만약 새로운 패키지 설치 후 이전 버전의 패키지가 더 이상 필요 없기 때문에 npm cache clean 명령어를 이용해 오래된 버전의 캐시를 정리해 주는 것입니다. 
+여기서 [npm cache clean 명령어](https://docs.npmjs.com/cli/cache)는 캐시 폴더를 삭제해 주는 명령어입니다. 캐시 폴더는 % AppData%/Roaming/npm-cache 디렉터리에 위치해 있습니다. 캐시 폴더의 목적은 다음에 패키지를 설치해주게 될 때 네트워크가 필요 없이 npm 패키지를 설치해주게 해주는 용도입니다. 만약 새로운 패키지 설치 후 이전 버전의 패키지가 더 이상 필요 없기 때문에 npm cache clean 명령어를 이용해 오래된 버전의 캐시를 정리해 주는 것입니다.
+
+그리고 최신 버전의 angular-cli를 설치합니다.
+
+	npm install --save-dev angular-cli@latest
 
 ### angular-cli@webpack 설치 ###
 
