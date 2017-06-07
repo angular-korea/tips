@@ -1,8 +1,8 @@
-# Angular 2 링크모음 #
+# Angular 링크모음 #
 
-> 마지막 수정일 : 2016-09-15 (v2)
+> 마지막 수정일 : 2017-06-07
 
-본 문서는 [Angular 2 Korea User Group](https://www.facebook.com/groups/angular2korea)이 제공하는 링크모음입니다. 좋은 문서들을 선별하여 업데이트할 예정입니다.
+본 문서는 [Angular Korea User Group](https://www.facebook.com/groups/angularkorea)이 제공하는 링크모음입니다. 좋은 문서들을 선별하여 업데이트할 예정입니다.
 
 ## Angular 2 소식 ##
 
@@ -12,10 +12,15 @@
 - [angular 2 주간미팅 노트](http://g.co/ng/weekly-notes)
 - [angular 블로그](http://angularjs.blogspot.kr/)
 
-## Angular 2 Dart ##
 
-- [angular.io의 dart문서](https://angular.io/dart)
-- [dartlang.org](https://www.dartlang.org/guides/language)
+
+## 타입스크립트 스타터 ##
+
+- [Typescript-React-Starter](https://github.com/Microsoft/TypeScript-React-Starter)
+- [Typescript-Vue-Starter](https://github.com/Microsoft/TypeScript-Vue-Starter)
+- [Typescript-Node-Starter](https://github.com/Microsoft/TypeScript-Node-Starter)
+- [Typescript-React-Native-Starter](https://github.com/Microsoft/TypeScript-React-Native-Starter)
+- [Typescript-WeChat-Starter](https://github.com/Microsoft/TypeScript-WeChat-Starter)
 
 
 ## 스타일가이드 ##
@@ -118,5 +123,3 @@ _ [meteor](http://www.angular-meteor.com/angular2)
 
 - [Angular 2 공식사이트 리소스](https://angular.io/resources/)
 - [https://github.com/AngularClass/awesome-angular2](ttps://github.com/AngularClass/awesome-angular2)
-
-
