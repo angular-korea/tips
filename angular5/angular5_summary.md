@@ -21,7 +21,7 @@ Angualr 5는 [프로그레시브 웹 앱](https://developers.google.com/web/fund
 
 - Form에서 [updateOn](https://next.angular.io/api/forms/FormControl) 설정시 blur와 sumit 옵션을 설정할 수 있게 됨
 
-  https://next.angular.io/api/forms/FormControl가
+  - https://next.angular.io/api/forms/FormControl
 
 
 - 라우터 이벤트([GuardsCheckStart](https://next.angular.io/api/router/GuardsCheckStart), [GuardsCheckEnd](https://next.angular.io/api/router/GuardsCheckEnd), [ResolveStart](https://next.angular.io/api/router/ResolveStart), [ResolveEnd](https://next.angular.io/api/router/ResolveEnd))가 추가 됐습니다.
