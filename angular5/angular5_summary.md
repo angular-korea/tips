@@ -8,12 +8,12 @@ Angualr 5는 [프로그레시브 웹 앱](https://developers.google.com/web/fund
 
 ### 변경된 점
 
-- @angular/http가 deprecate 되고 [@angular/common/http](https://next.angular.io/api/common/http/HttpClient)를 사용합니다.
+- @angular/http가 deprecated 됐고 [@angular/common/http](https://next.angular.io/api/common/http/HttpClient)를 사용합니다.
 - [@angular/core의 컴파일러](@angular/core의 컴파일러)
-  - 타입스크립트 2.4.x 버전 이상(템플릿 타입 검사 및 기타 기능 제공)을 필요로 합니다.
-- Reflective-Injector(폴리필에 의존) 대신 Static-Injector로 변경 됐습니다.
+  - [타입스크립트 2.4.x 버전](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-4.html) 이상(템플릿 타입 검사 및 기타 기능 제공)을 필요로 합니다.
+- Reflective-Injector(폴리필에 의존) 대신 [StaticInjector](https://github.com/angular/angular/commit/d9d00bd)를 사용하게 됐습니다.
 - router에서 [RouterOutlet](https://next.angular.io/api/router/RouterOutlet) 속성인 `locationInjector` 와 `locationFactoryResolver`가 제거 됐습니다.
-- Angular 4.0에 존재했던 ngGetConentSelectors가 deprecated 됐고 대신 [ComponentFactory](https://next.angular.io/api/core/ComponentFactory)가 ngContentSelectors를 사용하게 됐습니다.
+- Angular 4.0에 존재했던 ngGetConentSelectors가 deprecated 됐고 대신 [ComponentFactory](https://next.angular.io/api/core/ComponentFactory)가 [ngContentSelectors](https://github.com/angular/angular/pull/15214)를 사용하게 됐습니다.
 
 
 
@@ -50,8 +50,7 @@ Angualr 5는 [프로그레시브 웹 앱](https://developers.google.com/web/fund
     - 1) aot 옵션 추가 예 : ng build -aot -w  
     - 2) prod 옵션 추가 예 : ng build --prod --watch
 - 파이프([Plural](https://next.angular.io/api/common/I18nPluralPipe),[decimal](https://next.angular.io/api/common/DecimalPipe), [percent](https://next.angular.io/api/common/PercentPipe)/[currency](https://next.angular.io/api/common/CurrencyPipe))에 locale 옵션이 추가 됐습니다.
-- 테스팅 개선, 하이브리드 애플리케이션에 대한 성능 향상
-- 캐싱, 로깅, [XSRF](https://next.angular.io/api/http/XSRFStrategy), Testing, Lazy loading 등에 대한 개선
-- 에러 메시지가 보다 개선 됨
+- 테스팅 개선, 하이브리드 애플리케이션에 대한 성능 향상, 캐싱, 로깅, [XSRF](https://next.angular.io/api/http/XSRFStrategy), 등에 대한 개선
 - invalid CSS 속성을 감지할 수 있게 됐습니다.
-- 기타 버그 수정
+- 에러 메시지가 보다 개선 됨
+- 기타 버그 수정(Lazy loading시 모듈이 없는 경우 throw 등)
