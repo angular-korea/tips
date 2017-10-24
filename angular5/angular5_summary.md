@@ -9,7 +9,7 @@ Angualr 5는 [프로그레시브 웹 앱](https://developers.google.com/web/fund
 ### 변경된 점
 
 - @angular/http가 deprecated 됐고 [@angular/common/http](https://next.angular.io/api/common/http/HttpClient)를 사용합니다.
-- [@angular/core의 컴파일러](@angular/core의 컴파일러)
+- [@angular/core의 컴파일러](https://next.angular.io/api/core/Compiler)
   - [타입스크립트 2.4.x 버전](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-4.html) 이상(템플릿 타입 검사 및 기타 기능 제공)을 필요로 합니다.
 - Reflective-Injector(폴리필에 의존) 대신 [StaticInjector](https://github.com/angular/angular/commit/d9d00bd)를 사용하게 됐습니다.
 - router에서 [RouterOutlet](https://next.angular.io/api/router/RouterOutlet) 속성인 `locationInjector` 와 `locationFactoryResolver`가 제거 됐습니다.
