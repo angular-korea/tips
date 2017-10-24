@@ -45,10 +45,10 @@ Angualr 5는 [프로그레시브 웹 앱](https://developers.google.com/web/fund
 - [번들 사이즈 감소](https://next.angular.io/guide/webpack)
 - core가 [addEventListener](https://github.com/angular/angular/commit/6279e50)를 사용하도록 해 렌더링 속도를 개선함
 - 새로운 build-optimizer로 업데이트 됨
-- 빌드 속도 향상([AOT 컴파일러](https://next.angular.io/guide/aot-compiler)가 디폴트입니다.)
-  - Aot 빌드, Prod 빌드에 대한 속도가 빨라졌습니다.)
-    - 1) aot 옵션 추가 예 : ng build -aot -w  
-    - 2) prod 옵션 추가 예 : ng build --prod --watch
+- 빌드 속도 향상([AOT 컴파일러](https://next.angular.io/guide/aot-compiler)가 디폴트입니다.
+  - Aot 빌드, Prod 빌드에 대한 속도가 빨라졌습니다.
+    - 1) watch 시 aot 옵션 추가 예 : ng build -aot -w  
+    - 2) watch 시 prod 옵션 추가 예 : ng build --prod --watch
 - 파이프([Plural](https://next.angular.io/api/common/I18nPluralPipe),[decimal](https://next.angular.io/api/common/DecimalPipe), [percent](https://next.angular.io/api/common/PercentPipe)/[currency](https://next.angular.io/api/common/CurrencyPipe))에 locale 옵션이 추가 됐습니다.
 - 테스팅 개선, 하이브리드 애플리케이션에 대한 성능 향상, 캐싱, 로깅, [XSRF](https://next.angular.io/api/http/XSRFStrategy), 등에 대한 개선
 - invalid CSS 속성을 감지할 수 있게 됐습니다.
