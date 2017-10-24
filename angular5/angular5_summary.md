@@ -6,7 +6,7 @@ Angualr 5는 [프로그레시브 웹 앱](https://developers.google.com/web/fund
 
 
 
-### 변경된점
+### 변경된 점
 
 - @angular/http가 deprecate 되고 [@angular/common/http](https://next.angular.io/api/common/http/HttpClient)를 사용합니다.
 - [@angular/core의 컴파일러](@angular/core의 컴파일러)
@@ -17,7 +17,7 @@ Angualr 5는 [프로그레시브 웹 앱](https://developers.google.com/web/fund
 
 
 
-### 추가된점
+### 추가된 점
 
 - Form에서 [updateOn](https://next.angular.io/api/forms/FormControl) 설정시 blur와 sumit 옵션을 설정할 수 있게 됨
 
