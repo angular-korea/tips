@@ -1,4 +1,4 @@
-## Angular 5의 특징
+## Angular 5의 특징 요약
 
 > by [happygrammer](https://twitter.com/happygrammer)
 
