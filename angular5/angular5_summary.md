@@ -2,7 +2,7 @@
 
 > by happygrammer
 
-Angualr 5는 프로그레시브 웹 앱(progressive web app)을 지원합니다. Angular 5로 개발시 프로그레시브 웹 앱과  서버 사이드 렌더링을 함께 고려하면 모바일 디바이스에서 보다 새로운 사용자 경험이 생길것입니다.
+Angualr 5는 [프로그레시브 웹 앱](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/?hl=ko)(progressive web app)을 지원합니다. Angular 5로 개발시 프로그레시브 웹 앱과  [서버 사이드 렌더링](https://next.angular.io/guide/universal)을 함께 고려하면 모바일 디바이스에서 보다 새로운 사용자 경험이 생길것입니다.
 
 
 
