@@ -8,7 +8,7 @@ Angualr 5는 프로그레시브 웹 앱(progressive web app)을 지원합니다.
 
 ### 변경된점
 
-- @angular/http가 deprecate 되고 [@angular/common/http](@angular/common/http)를 사용합니다.
+- @angular/http가 deprecate 되고 [@angular/common/http](https://next.angular.io/api/common/http/HttpClient)를 사용합니다.
 - [@angular/core의 컴파일러](@angular/core의 컴파일러)
   - 타입스크립트 2.4.x 버전 이상(템플릿 타입 검사 및 기타 기능 제공)을 필요로 합니다.
 - Reflective-Injector(폴리필에 의존) 대신 Static-Injector로 변경 됐습니다.
