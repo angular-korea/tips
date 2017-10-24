@@ -2,7 +2,7 @@
 
 > by [happygrammer](https://twitter.com/happygrammer)
 
-Angualr 5는 [프로그레시브 웹 앱](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/?hl=ko)(progressive web app)을 지원합니다. Angular 5로 개발시 프로그레시브 웹 앱과  [서버 사이드 렌더링](https://next.angular.io/guide/universal)을 함께 고려하면 모바일 디바이스에서 보다 새로운 사용자 경험이 생길것입니다.
+Angualr 5는 [프로그레시브 웹 앱](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/?hl=ko)(progressive web app)을 지원합니다. Angular 5로 개발 시 프로그레시브 웹 앱과  [서버 사이드 렌더링](https://next.angular.io/guide/universal)을 함께 고려하면 모바일 디바이스에서 보다 새로운 사용자 경험이 생길것입니다.
 
 
 
@@ -38,6 +38,8 @@ Angualr 5는 [프로그레시브 웹 앱](https://developers.google.com/web/fund
 
 - animations에서 [@.disabled](https://next.angular.io/api/animations/trigger) 속성이 추가돼 자식 애니메이션을 disable 할 수 있게 함
 
+- 파이프([Plural](https://next.angular.io/api/common/I18nPluralPipe),[decimal](https://next.angular.io/api/common/DecimalPipe), [percent](https://next.angular.io/api/common/PercentPipe)/[currency](https://next.angular.io/api/common/CurrencyPipe))에 locale 옵션이 추가 됐습니다.
+
   ​
 
 ### 개선된 점
@@ -49,7 +51,6 @@ Angualr 5는 [프로그레시브 웹 앱](https://developers.google.com/web/fund
   - Aot 빌드, Prod 빌드에 대한 속도가 빨라졌습니다.
     - 1) watch 시 aot 옵션 추가 예 : ng build -aot -w  
     - 2) watch 시 prod 옵션 추가 예 : ng build --prod --watch
-- 파이프([Plural](https://next.angular.io/api/common/I18nPluralPipe),[decimal](https://next.angular.io/api/common/DecimalPipe), [percent](https://next.angular.io/api/common/PercentPipe)/[currency](https://next.angular.io/api/common/CurrencyPipe))에 locale 옵션이 추가 됐습니다.
 - 테스팅 개선, 하이브리드 애플리케이션에 대한 성능 향상, 캐싱, 로깅, [XSRF](https://next.angular.io/api/http/XSRFStrategy), 등에 대한 개선
 - invalid CSS 속성을 감지할 수 있게 됐습니다.
 - 에러 메시지가 보다 개선 됨
