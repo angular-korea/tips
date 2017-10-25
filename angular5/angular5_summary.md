@@ -22,8 +22,8 @@ Angualr 5는 [프로그레시브 웹 앱](https://developers.google.com/web/fund
 ### 추가된 점
 
 - 컴파일러
-  - 템플릿 타입 검사(template typechecking)가 가능하게 됨
-  - 기타 타입스크리틉 2.4 이상에 대한 기능 제공
+  - 템플릿 타입 검사(template type checking)가 가능하게 됨
+  - 기타 타입스크립트 2.4 이상에 대한 기능 제공
 - Form에서 [updateOn](https://next.angular.io/api/forms/FormControl) 설정시 blur와 sumit 옵션을 설정할 수 있게 됨
   - https://next.angular.io/api/forms/FormControl
 
