@@ -33,7 +33,7 @@ Angualr 5는 [프로그레시브 웹 앱](https://developers.google.com/web/fund
   - [currency 파이프](https://next.angular.io/api/common/CurrencyPipe)
     - default 심볼이 USD4.99 대신 en-US인 $4.99로 변경됨
   - [percent 파이프](https://next.angular.io/api/common/PercentPipe)
-    - {{ 3.141592 | percent }}라고 314.1592%가 아닌 ```en-US``` locale에 따라 314%가 출력됨
+    - {{ 3.141592 | percent }}일때 314.1592%가 아닌 ```en-US``` locale에 따라 314%로 출력됨
 
 
 
@@ -47,7 +47,7 @@ Angualr 5는 [프로그레시브 웹 앱](https://developers.google.com/web/fund
   - 컴파일러는 타입스크립트 2.4 이상에서만 지원됨(beta.7)
     - TS 2.4 이상을 사용함으로써 템플릿 타입 검사(template type checking)가 가능하게 됨
   - 여러 exportAs 이름을 사용할 수 있게됨([#18723](https://github.com/angular/angular/issues/18723)) ([7ec28fe](https://github.com/angular/angular/commit/7ec28fe))(beta.6)
-- Form에서 [updateOn](https://next.angular.io/api/forms/FormControl) 설정시 blur와 sumit 옵션을 설정할 수 있게 됨(beta.3)
+- Form에서 [updateOn](https://next.angular.io/api/forms/FormControl) 설정시 blur와 submit 옵션을 설정할 수 있게 됨(beta.3)
   - https://next.angular.io/api/forms/FormControl
 
 
@@ -74,16 +74,15 @@ Angualr 5는 [프로그레시브 웹 앱](https://developers.google.com/web/fund
   - watch 모드시 속도가 빨라짐 ([#19275](https://github.com/angular/angular/issues/19275)) ([6665d76](https://github.com/angular/angular/commit/6665d76))
     - 명령어(aot+watch) 예 : ng build -aot -w  
     - 명령어(prod+watch) 예 : ng build --prod --watch
+- invalid CSS 속성을 감지해 에러를 표시할 수 있게 됨(beta.5)
 
 
 
 ### 기타
 
-- 에러 메시지가 보다 개선 됨
-- invalid CSS 속성을 감지해 에러를 표시할 수 있게 됨(beta.5)
 - 새로운 build-optimizer로 업데이트 됨
-- 테스팅 개선, 하이브리드 애플리케이션에 대한 성능 향상, 캐싱, 로깅, [XSRF](https://next.angular.io/api/http/XSRFStrategy), 등에 대한 개선
-- 버그 수정
+- 에러 메시지의 개선, 테스팅 개선, hybrid 애플리케이션에 대한 성능 향상, 캐싱, 로깅, [XSRF](https://next.angular.io/api/http/XSRFStrategy), 등에 대한 개선
+- 버그 수정 통계
   - 5.0.0-rc에서는 총 68건의 버그 수정
     - rc.5(1건), rc.4(3건), rc.3(14건), rc.2(3건), rc.1( 13건), rc.0(34건)
   - 5.0.0.beta에서는 총 69건의 버그 수정
