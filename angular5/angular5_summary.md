@@ -49,12 +49,11 @@ Angualr 5는 [프로그레시브 웹 앱](https://developers.google.com/web/fund
 
   ​
 
-### 성능이 개선된 점
+### 개선된 점
 
 - [번들 사이즈 감소](https://next.angular.io/guide/webpack)
-  - AST classes를 제거해 번들 사이즈 감소시킴  ([#19673](https://github.com/angular/angular/issues/19673)) ([76d2496](https://github.com/angular/angular/commit/76d2496))  / ([#19539](https://github.com/angular/angular/issues/19539)) ([d5c9c5f](https://github.com/angular/angular/commit/d5c9c5f))
+  - AST classes를 제거해 번들 사이즈의 용량을 줄임 ([#19539](https://github.com/angular/angular/issues/19539)) ([d5c9c5f](https://github.com/angular/angular/commit/d5c9c5f))(rc.2)
 - core가 [addEventListener](https://github.com/angular/angular/commit/6279e50)를 사용하도록 해 렌더링 속도를 개선함
-- 새로운 build-optimizer로 업데이트 됨
 - 빌드 속도가 향상([AOT 컴파일러](https://next.angular.io/guide/aot-compiler)가 디폴트)됨
   - Aot 빌드, Prod 빌드에 대한 속도가 빨라짐
   - watch 모드시 속도가 빨라짐 ([#19275](https://github.com/angular/angular/issues/19275)) ([6665d76](https://github.com/angular/angular/commit/6665d76))
@@ -67,8 +66,13 @@ Angualr 5는 [프로그레시브 웹 앱](https://developers.google.com/web/fund
 ### 기타 개선된 점
 
 - invalid CSS 속성을 감지할 수 있게 됨
+- 새로운 build-optimizer로 업데이트 됨
 - 에러 메시지가 보다 개선 됨
-- 기타 버그 수정(Lazy loading시 모듈이 없는 경우 throw 등)
+- 버그 수정
+  - 5.0.0-rc에서는 총 68건의 버그 수정
+    - rc.5(1건), rc.4(3건), rc.3(14건), rc.2(3건), rc.1( 13건), rc.0(34건)
+  - 5.0.0.beta에서는 총 69건의 버그 수정
+    - beta.6(21건), beta.5(11건), beta.5(11건), beta.4(3건), beta.3(12건) beta.2(2건), beta.1(9건)
 
 
 
