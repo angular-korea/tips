@@ -25,11 +25,9 @@ Angualr 5는 [프로그레시브 웹 앱](https://developers.google.com/web/fund
   - LOCALE_ID값을 다른 locale로 변경하면 해당 언어에 대한 locale 데이터를 가져와야함
 - 파이프([Plural](https://next.angular.io/api/common/I18nPluralPipe),[decimal](https://next.angular.io/api/common/DecimalPipe), [percent](https://next.angular.io/api/common/PercentPipe)/[currency](https://next.angular.io/api/common/CurrencyPipe))에 locale 옵션이 추가 됨(beta.5)
   - [Date 파이프](https://next.angular.io/api/common/DatePipe)
-    - 포맷이 변경이 있음
-    - 포맷이 추가됨
+    - 포맷 변경있고 다음과 같은 포맷이 추가됨
       - `long`, `full`, `longTime`, `fullTime` 포맷이 추가됨
-      - ```yyy ```포맷이 지원됨
-      - 기타 여러 포맷이 추가됨
+      - ```yyy ```포맷이 지원되고 기타 여러 포맷이 추가됨
   - [currency 파이프](https://next.angular.io/api/common/CurrencyPipe)
     - default 심볼이 USD4.99 대신 en-US인 $4.99로 변경됨
   - [percent 파이프](https://next.angular.io/api/common/PercentPipe)
@@ -58,8 +56,7 @@ Angualr 5는 [프로그레시브 웹 앱](https://developers.google.com/web/fund
 - animations
 
   -  :increment , :decrement에 대한 전환 별칭(aliases)을 지원하게 됨([6f45519](https://github.com/angular/angular/commit/6f45519))(beta.0)
-  - animations에서 query() 사용시 limit 추가 됨(rc.0)
-    - https://next.angular.io/api/animations/query
+  - animations에서 [query()](https://next.angular.io/api/animations/query) 사용시 limit 추가 됨(rc.0)
   - animations에서 [@.disabled](https://next.angular.io/api/animations/trigger) 속성이 추가돼 자식 애니메이션을 disable 할 수 있게 함(beta.5)
 
   ​
