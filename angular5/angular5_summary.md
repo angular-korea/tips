@@ -14,8 +14,14 @@ Angualr 5는 [프로그레시브 웹 앱](https://developers.google.com/web/fund
 - [@angular/core의 컴파일러](https://next.angular.io/api/core/Compiler)는 [타입스크립트 2.4.x 버전](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-4.html) 이상을 필요로 합니다.(beta.7)
 - ReflectiveInjector(폴리필에 의존)가 deprecated됐고 [StaticInjector](https://github.com/angular/angular/commit/d9d00bd)인 Injector.create를 사용하게 됨
 - router : [RouterOutlet](https://next.angular.io/api/router/RouterOutlet) 속성인 `locationInjector` 와 `locationFactoryResolver`가 deprecated  됨(beta.7)
+- v4에서 사용되던 NgFor가 deprecated되고 NgForOf를 사용해야 함(beta.5)
+- NgTemplateOutlet#ngOutletContext가 deprecated됨 Testability#findProviders를 사용해야 함(beta.5)
+- DebugNode#source가 defrecated됨(beta.5)
+- TrackByFn가 deprecated됨, TrackByFunction를 사용해야함(beta.5)
+- platform-webworker가 deprecated됨, SerializerTypes.PRIMITIVE를 사용해야함(beta.5)
 - I18n 파이프(beta.5)
-  - angular는 en-US 언어만을 locale 데이터로 포함돼 있음
+  - 더이상 초기화를 위한 폴리필을 사용하지 않아도 됨
+  - angular는 en-US 언어에 대한 locale 데이터를 디폴트로 포함함
   - LOCALE_ID값을 다른 locale로 변경하면 해당 언어에 대한 locale 데이터를 가져와야함
 - 파이프([Plural](https://next.angular.io/api/common/I18nPluralPipe),[decimal](https://next.angular.io/api/common/DecimalPipe), [percent](https://next.angular.io/api/common/PercentPipe)/[currency](https://next.angular.io/api/common/CurrencyPipe))에 locale 옵션이 추가 됨(beta.5)
   - [Date 파이프](https://next.angular.io/api/common/DatePipe)
@@ -35,21 +41,19 @@ Angualr 5는 [프로그레시브 웹 앱](https://developers.google.com/web/fund
 
 ### 추가된 점
 
-- [@angular/service-worker](@angular/service-worker)가 추가 됨
+- [@angular/service-worker](@angular/service-worker)가 추가 됨(rc.0)
   - Progressive 웹 앱을 가능케 하는 패키지
 - 컴파일러
   - 컴파일러는 타입스크립트 2.4 이상에서만 지원됨(beta.7)
     - TS 2.4 이상을 사용함으로써 템플릿 타입 검사(template type checking)가 가능하게 됨
   - 여러 exportAs 이름을 사용할 수 있게됨([#18723](https://github.com/angular/angular/issues/18723)) ([7ec28fe](https://github.com/angular/angular/commit/7ec28fe))(beta.6)
-- Form에서 [updateOn](https://next.angular.io/api/forms/FormControl) 설정시 blur와 sumit 옵션을 설정할 수 있게 됨
+- Form에서 [updateOn](https://next.angular.io/api/forms/FormControl) 설정시 blur와 sumit 옵션을 설정할 수 있게 됨(beta.3)
   - https://next.angular.io/api/forms/FormControl
 
 
 - 라우터 이벤트([GuardsCheckStart](https://next.angular.io/api/router/GuardsCheckStart), [GuardsCheckEnd](https://next.angular.io/api/router/GuardsCheckEnd), [ResolveStart](https://next.angular.io/api/router/ResolveStart), [ResolveEnd](https://next.angular.io/api/router/ResolveEnd))가 추가 됨(beta.7)
 
-- platform-server 패키지에서 [TransferState](https://next.angular.io/api/platform-browser/TransferState) API가 추가됨
-
-- 안정화된 [NgTemplateOutlet](https://next.angular.io/api/common/NgTemplateOutlet) API가 추가 됨
+- platform-server 패키지에서 [TransferState](https://next.angular.io/api/platform-browser/TransferState) API가 추가됨(rc.0)
 
 - animations
 
