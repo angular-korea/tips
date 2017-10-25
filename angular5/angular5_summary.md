@@ -14,6 +14,20 @@ Angualr 5는 [프로그레시브 웹 앱](https://developers.google.com/web/fund
 - [@angular/core의 컴파일러](https://next.angular.io/api/core/Compiler)는 [타입스크립트 2.4.x 버전](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-4.html) 이상을 필요로 합니다.(beta.7)
 - ReflectiveInjector(폴리필에 의존)가 deprecated됐고 [StaticInjector](https://github.com/angular/angular/commit/d9d00bd)인 Injector.create를 사용하게 됨
 - router : [RouterOutlet](https://next.angular.io/api/router/RouterOutlet) 속성인 `locationInjector` 와 `locationFactoryResolver`가 deprecated  됨(beta.7)
+- I18n 파이프(beta.5)
+  - angular는 en-US 언어만을 locale 데이터로 포함돼 있음
+  - LOCALE_ID값을 다른 locale로 변경하면 해당 언어에 대한 locale 데이터를 가져와야함
+- 파이프([Plural](https://next.angular.io/api/common/I18nPluralPipe),[decimal](https://next.angular.io/api/common/DecimalPipe), [percent](https://next.angular.io/api/common/PercentPipe)/[currency](https://next.angular.io/api/common/CurrencyPipe))에 locale 옵션이 추가 됨(beta.5)
+  - [Date 파이프](https://next.angular.io/api/common/DatePipe)
+    - 포맷이 변경이 있음
+    - 포맷이 추가됨
+      - `long`, `full`, `longTime`, `fullTime` 포맷이 추가됨
+      - ```yyy ```포맷이 지원됨
+      - 기타 여러 포맷이 추가됨
+  - [currency](https://next.angular.io/api/common/CurrencyPipe) 파이프
+    - default 심볼이 USD4.99 대신 en-US인 $4.99로 변경됨
+  - percent pipe
+    - {{ 3.141592 | percent }}라고 314.1592%가 아닌 ```en-US``` locale에 따라 314%가 출력됨
 
 
 
@@ -41,11 +55,9 @@ Angualr 5는 [프로그레시브 웹 앱](https://developers.google.com/web/fund
 - animations
 
   -  :increment , :decrement에 대한 전환 별칭(aliases)을 지원하게 됨([6f45519](https://github.com/angular/angular/commit/6f45519))(beta.0)
-  - animations에서 query() 사용시 limit 추가 됨
+  - animations에서 query() 사용시 limit 추가 됨(rc.0)
     - https://next.angular.io/api/animations/query
-  - animations에서 [@.disabled](https://next.angular.io/api/animations/trigger) 속성이 추가돼 자식 애니메이션을 disable 할 수 있게 함
-
-- 파이프([Plural](https://next.angular.io/api/common/I18nPluralPipe),[decimal](https://next.angular.io/api/common/DecimalPipe), [percent](https://next.angular.io/api/common/PercentPipe)/[currency](https://next.angular.io/api/common/CurrencyPipe))에 locale 옵션이 추가 됨
+  - animations에서 [@.disabled](https://next.angular.io/api/animations/trigger) 속성이 추가돼 자식 애니메이션을 disable 할 수 있게 함(beta.5)
 
   ​
 
@@ -59,15 +71,15 @@ Angualr 5는 [프로그레시브 웹 앱](https://developers.google.com/web/fund
   - watch 모드시 속도가 빨라짐 ([#19275](https://github.com/angular/angular/issues/19275)) ([6665d76](https://github.com/angular/angular/commit/6665d76))
     - 명령어(aot+watch) 예 : ng build -aot -w  
     - 명령어(prod+watch) 예 : ng build --prod --watch
-- 테스팅 개선, 하이브리드 애플리케이션에 대한 성능 향상, 캐싱, 로깅, [XSRF](https://next.angular.io/api/http/XSRFStrategy), 등에 대한 개선
 
 
 
 ### 기타 개선된 점
 
+- 에러 메시지가 보다 개선 됨
 - invalid CSS 속성을 감지할 수 있게 됨
 - 새로운 build-optimizer로 업데이트 됨
-- 에러 메시지가 보다 개선 됨
+- 테스팅 개선, 하이브리드 애플리케이션에 대한 성능 향상, 캐싱, 로깅, [XSRF](https://next.angular.io/api/http/XSRFStrategy), 등에 대한 개선
 - 버그 수정
   - 5.0.0-rc에서는 총 68건의 버그 수정
     - rc.5(1건), rc.4(3건), rc.3(14건), rc.2(3건), rc.1( 13건), rc.0(34건)
