@@ -35,6 +35,8 @@ Angualr 5는 [프로그레시브 웹 앱](https://developers.google.com/web/fund
 
 ### 추가된 점
 
+- [@angular/service-worker](@angular/service-worker)가 추가 됨
+  - Progressive 웹 앱을 가능케 하는 패키지
 - 컴파일러
   - 템플릿 타입 검사(template type checking)가 가능하게 됨
   - 기타 타입스크립트 2.4 이상에 대한 기능 제공
@@ -43,10 +45,6 @@ Angualr 5는 [프로그레시브 웹 앱](https://developers.google.com/web/fund
 
 
 - 라우터 이벤트([GuardsCheckStart](https://next.angular.io/api/router/GuardsCheckStart), [GuardsCheckEnd](https://next.angular.io/api/router/GuardsCheckEnd), [ResolveStart](https://next.angular.io/api/router/ResolveStart), [ResolveEnd](https://next.angular.io/api/router/ResolveEnd))가 추가 됨(beta.7)
-
-- [@angular/service-worker](@angular/service-worker)가 추가 됨
-
-  - Progressive 웹 앱을 가능케 하는 패키지
 
 - platform-server 패키지에서 [TransferState](https://next.angular.io/api/platform-browser/TransferState) API가 추가됨
 
@@ -88,7 +86,7 @@ Angualr 5는 [프로그레시브 웹 앱](https://developers.google.com/web/fund
 
 
 
-### 링크
+### 참고 링크
 
 - Angular의 [CHANGELOG](https://github.com/angular/angular/blob/master/CHANGELOG.md)
 - Angular 5의 문서(https://next.angular.io/docs)
