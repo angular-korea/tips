@@ -2,7 +2,7 @@
 
 > by [happygrammer](https://twitter.com/happygrammer)
 
-Angualr 5는 서비스 워커(service worker)를 이용해 [프로그레시브 웹 앱](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/?hl=ko)(progressive web app)을 지원합니다. Angular 5로 개발 시 프로그레시브 웹 앱과  [서버 사이드 렌더링](https://next.angular.io/guide/universal)을 함께 고려하면 모바일 디바이스에서 보다 새로운 사용자 경험이 생길것입니다.
+Angualr 5는 [서비스 워커(service worker)](https://github.com/angular/angular/pull/19274)를 이용해 [프로그레시브 웹 앱](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/?hl=ko)(progressive web app)을 지원합니다.  Angular 5로 개발 시 프로그레시브 웹 앱과  [서버 사이드 렌더링](https://next.angular.io/guide/universal)을 함께 고려하면 모바일 디바이스에서 보다 새로운 사용자 경험이 생길것입니다. 
 
 
 
@@ -27,6 +27,8 @@ Angualr 5는 서비스 워커(service worker)를 이용해 [프로그레시브 �
 - DebugNode#source가 defrecated됨(beta.5)
 
 - TrackByFn가 deprecated됨, [TrackByFunction](https://next.angular.io/api/core/TrackByFunction)를 사용해야함(beta.5)
+
+- [UpgradeAdapter](https://next.angular.io/api/upgrade/UpgradeAdapter)는 v5에서 deprecated됐고 upgrade/static을 대신 사용함
 
 - platform-webworker가 deprecated됨, [SerializerTypes.PRIMITIVE](https://next.angular.io/api/platform-webworker/SerializerTypes)를 사용해야함(beta.5)
 
@@ -97,7 +99,8 @@ Angualr 5는 서비스 워커(service worker)를 이용해 [프로그레시브 �
 - [번들 사이즈 감소](https://next.angular.io/guide/webpack)
   - AST classes를 제거해 번들 사이즈의 용량을 줄임 ([#19539](https://github.com/angular/angular/issues/19539)) ([d5c9c5f](https://github.com/angular/angular/commit/d5c9c5f))(rc.2)
 - core가 [addEventListener](https://github.com/angular/angular/commit/6279e50)를 사용하도록 해 렌더링 속도를 개선함
-- 빌드 속도가 향상([AOT 컴파일러](https://next.angular.io/guide/aot-compiler)가 디폴트)됨
+- 빌드 속도가 향상됨
+  - [AOT 컴파일러](https://next.angular.io/guide/aot-compiler)가 디폴트
   - Aot 빌드, Prod 빌드에 대한 속도가 빨라짐
   - watch 모드시 속도가 빨라짐 ([#19275](https://github.com/angular/angular/issues/19275)) ([6665d76](https://github.com/angular/angular/commit/6665d76))
     - 명령어(aot+watch) 예 : ng build -aot -w  
@@ -110,7 +113,9 @@ Angualr 5는 서비스 워커(service worker)를 이용해 [프로그레시브 �
 
 ### 기타
 
+- [Material 디자인 컴포넌트](https://material.angular.io/)가 서버 사이드 렌더링에서 호환됨
 - 새로운 build-optimizer로 업데이트 됨
+  - 불필요한 코드를 제거해 애플리케이션의 사이즈를 줄임
 - 에러 메시지의 개선, 테스팅 개선, hybrid 애플리케이션에 대한 성능 향상, 캐싱, 로깅, [XSRF](https://next.angular.io/api/http/XSRFStrategy), 등에 대한 개선
 - 성능 개선(performance improvements) 통계
   - 5.0.0-rc에서는 총 10건의 성능 개선
@@ -125,7 +130,10 @@ Angualr 5는 서비스 워커(service worker)를 이용해 [프로그레시브 �
 
 
 
+
 ### 참고 링크
 
 - Angular의 [CHANGELOG](https://github.com/angular/angular/blob/master/CHANGELOG.md)
+
+
 - Angular 5의 문서(https://next.angular.io/docs)
