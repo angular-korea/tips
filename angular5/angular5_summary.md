@@ -11,19 +11,30 @@ Angualr 5는 서비스 워커(service worker)를 이용해 [프로그레시브 �
 - @angular/http가 deprecated 됐고 [@angular/common/http](https://next.angular.io/api/common/http/HttpClient)를 사용합니다(beta.6)
   - [HttpClient](https://next.angular.io/api/common/http/HttpClient)를 이용해 HTTP 요청을 하게 됨
     - [HttpClient 가이드](https://next.angular.io/guide/http)
-- OpaqueToken이 deprecated 됨(beta.6)
+
 - [@angular/core의 컴파일러](https://next.angular.io/api/core/Compiler)는 [타입스크립트 2.4.x 버전](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-4.html) 이상을 필요로 하게 됨(beta.7)
+
 - ReflectiveInjector(폴리필에 의존)가 deprecated됐고 [StaticInjector](https://github.com/angular/angular/commit/d9d00bd)인 Injector.create를 사용하게 됨(beta.3)
+
+- OpaqueToken이 deprecated 됨(beta.6)
+
 - router : [RouterOutlet](https://next.angular.io/api/router/RouterOutlet) 속성인 `locationInjector` 와 `locationFactoryResolver`가 deprecated  됨(beta.7)
+
 - v4에서 사용되던 NgFor가 deprecated되고 [NgForOf](https://next.angular.io/api/common/NgForOf)를 사용해야 함(beta.5)
+
 - NgTemplateOutlet#ngOutletContext가 deprecated됨 Testability#findProviders를 사용해야 함(beta.5)
+
 - DebugNode#source가 defrecated됨(beta.5)
+
 - TrackByFn가 deprecated됨, [TrackByFunction](https://next.angular.io/api/core/TrackByFunction)를 사용해야함(beta.5)
+
 - platform-webworker가 deprecated됨, [SerializerTypes.PRIMITIVE](https://next.angular.io/api/platform-webworker/SerializerTypes)를 사용해야함(beta.5)
+
 - I18n 파이프(beta.5)
   - 더이상 초기화를 위한 폴리필을 사용하지 않아도 됨
   - angular는 en-US 언어에 대한 locale 데이터를 디폴트로 포함함
   - LOCALE_ID값을 다른 locale로 변경하면 해당 언어에 대한 locale 데이터를 가져와야함
+
 - 파이프([Plural](https://next.angular.io/api/common/I18nPluralPipe),[decimal](https://next.angular.io/api/common/DecimalPipe), [percent](https://next.angular.io/api/common/PercentPipe)/[currency](https://next.angular.io/api/common/CurrencyPipe))에 locale 옵션이 추가 됨(beta.5)
   - [Date 파이프](https://next.angular.io/api/common/DatePipe)
     - 포맷 변경있고 다음과 같은 포맷이 추가됨
@@ -59,7 +70,7 @@ Angualr 5는 서비스 워커(service worker)를 이용해 [프로그레시브 �
 
 - [@angular/service-worker](https://next.angular.io/api/service-worker)가 추가 됨(rc.0)
   - Progressive 웹 앱을 가능케 하는 패키지
-  - 관련 자료 
+  - 관련 자료
     - [Angular Service Workers](http://pascalprecht.github.io/slides/angular-and-service-workers/#/)
 - 컴파일러
   - 컴파일러는 타입스크립트 2.4 이상에서만 지원됨(beta.7)
