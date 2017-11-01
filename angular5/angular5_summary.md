@@ -9,50 +9,35 @@ Angualr 5는 [서비스 워커(service worker)](https://github.com/angular/angul
 ### 변경된 점
 
 - Angular 5는 Angular CLI 1.5 버전 이상에서 지원됩니다.
-
 - Angular 5는 RxJS를 5.5.2 이상 버전으로 업데이트 됐습니다.
-
 - [@angular/core의 컴파일러](https://next.angular.io/api/core/Compiler)는 [타입스크립트 2.4.x 버전](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-4.html) 이상을 필요로 하게 됨(beta.7)
 
-- ReflectiveInjector(폴리필에 의존)가 deprecated됐고 [StaticInjector](https://github.com/angular/angular/commit/d9d00bd)인 Injector.create를 사용하게 됨(beta.3)
-
-  - 변경전 : ReflectiveInjector.resolveAndCreate(providers);
-  - 변경후 : Injector.create(providers);
-
-- OpaqueToken이 deprecated 됨(beta.6)
-
-- router : [RouterOutlet](https://next.angular.io/api/router/RouterOutlet) 속성인 `locationInjector` 와 `locationFactoryResolver`가 deprecated  됨(beta.7)
-
-- v4에서 사용되던 NgFor가 deprecated되고 [NgForOf](https://next.angular.io/api/common/NgForOf)를 사용해야 함(beta.5)
-
-- NgTemplateOutlet#ngOutletContext가 deprecated됨 Testability#findProviders를 사용해야 함(beta.5)
-
-- DebugNode#source가 defrecated됨(beta.5)
-
-- TrackByFn가 deprecated됨, [TrackByFunction](https://next.angular.io/api/core/TrackByFunction)를 사용해야함(beta.5)
-
-- [UpgradeAdapter](https://next.angular.io/api/upgrade/UpgradeAdapter)는 v5에서 deprecated됐고 upgrade/static을 대신 사용함
-
-- platform-webworker가 deprecated됨, [SerializerTypes.PRIMITIVE](https://next.angular.io/api/platform-webworker/SerializerTypes)를 사용해야함(beta.5)
 
 - I18n 파이프(beta.5)
+
   - 더이상 초기화를 위한 폴리필을 사용하지 않아도 됨
   - angular는 en-US 언어에 대한 locale 데이터를 디폴트로 포함함
   - LOCALE_ID값을 다른 locale로 변경하면 해당 언어에 대한 locale 데이터를 가져와야함
 
 - 파이프([Plural](https://next.angular.io/api/common/I18nPluralPipe),[decimal](https://next.angular.io/api/common/DecimalPipe), [percent](https://next.angular.io/api/common/PercentPipe)/[currency](https://next.angular.io/api/common/CurrencyPipe))에 locale 옵션이 추가 됨(beta.5)
+
   - [Date 파이프](https://next.angular.io/api/common/DatePipe)
+
     - 포맷 변경있고 다음과 같은 포맷이 추가됨
       - `long`, `full`, `longTime`, `fullTime` 포맷이 추가됨
       - ```yyy ```포맷이 지원되고 기타 여러 포맷이 추가됨
+
   - [currency 파이프](https://next.angular.io/api/common/CurrencyPipe)
+
     - default 심볼이 USD4.99 대신 en-US인 $4.99로 변경됨
 
       ```
       <!--output '$0.259'-->
       <p>A: {{a | currency}}</p>
       ```
+
   - [percent 파이프](https://next.angular.io/api/common/PercentPipe)
+
     - {{ 3.141592 | percent }}일때 314.1592%가 아닌 ```en-US``` locale에 따라 314%로 출력됨
 
     - {{ 0.259 | percent}}일 때의 출력은 26%가 됨
@@ -66,6 +51,22 @@ Angualr 5는 [서비스 워커(service worker)](https://github.com/angular/angul
       })
       export class PercentPipeComponent { }
       ```
+
+
+
+### Deprecated 코드
+
+- ReflectiveInjector(폴리필에 의존)가 deprecated됐고 [StaticInjector](https://github.com/angular/angular/commit/d9d00bd)인 Injector.create를 사용하게 됨(beta.3)
+  - 변경전 : ReflectiveInjector.resolveAndCreate(providers);
+  - 변경후 : Injector.create(providers);
+- OpaqueToken이 deprecated 됨(beta.6)
+- router : [RouterOutlet](https://next.angular.io/api/router/RouterOutlet) 속성인 `locationInjector` 와 `locationFactoryResolver`가 deprecated  됨(beta.7)
+- v4에서 사용되던 NgFor가 deprecated되고 [NgForOf](https://next.angular.io/api/common/NgForOf)를 사용해야 함(beta.5)
+- NgTemplateOutlet#ngOutletContext가 deprecated됨 Testability#findProviders를 사용해야 함(beta.5)
+- DebugNode#source가 defrecated됨(beta.5)
+- TrackByFn가 deprecated됨, [TrackByFunction](https://next.angular.io/api/core/TrackByFunction)를 사용해야함(beta.5)
+- [UpgradeAdapter](https://next.angular.io/api/upgrade/UpgradeAdapter)는 v5에서 deprecated됐고 대신 upgrade/static을 사용함
+- platform-webworker가 deprecated됨, [SerializerTypes.PRIMITIVE](https://next.angular.io/api/platform-webworker/SerializerTypes)를 사용해야함(beta.5)
 
 
 
