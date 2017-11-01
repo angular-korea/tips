@@ -2,15 +2,16 @@
 
 > by [happygrammer](https://twitter.com/happygrammer)
 
-Angualr 5는 [서비스 워커(service worker)](https://github.com/angular/angular/pull/19274)를 이용해 [프로그레시브 웹 앱](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/?hl=ko)(progressive web app)을 지원합니다.  Angular 5로 개발 시 프로그레시브 웹 앱과  [서버 사이드 렌더링](https://next.angular.io/guide/universal)을 함께 고려하면 모바일 디바이스에서 보다 새로운 사용자 경험이 생길것입니다. 
+Angualr 5는 [서비스 워커(service worker)](https://github.com/angular/angular/pull/19274)를 이용해 [프로그레시브 웹 앱](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/?hl=ko)(progressive web app)을 지원합니다.  Angular 5로 개발 시 프로그레시브 웹 앱과  [서버 사이드 렌더링](https://next.angular.io/guide/universal)을 함께 고려하면 모바일 디바이스에서 보다 새로운 사용자 경험이 생길것입니다. 다음은 Angular 5에 대한 특징 요약입니다.
 
 
 
 ### 변경된 점
 
-- Angular 5는 Angular CLI 1.5 버전 이상에서 지원됩니다.
-- Angular 5는 RxJS를 5.5.2 이상 버전으로 업데이트 됐습니다.
-- [@angular/core의 컴파일러](https://next.angular.io/api/core/Compiler)는 [타입스크립트 2.4.x 버전](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-4.html) 이상을 필요로 하게 됨(beta.7)
+- Angular 5는 `Angular CLI 1.5` 버전 이상에서 지원됨
+- Angular 5는 RxJS를 5.5.2 이상 버전으로 업데이트됨
+- 타입스크립트 2.4 이상으로 업데이트 해야함
+  - [@angular/core의 컴파일러](https://next.angular.io/api/core/Compiler)는 [타입스크립트 2.4.x 버전](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-4.html) 이상을 필요로 하게 됨(beta.7)
 
 
 - I18n 파이프(beta.5)
@@ -107,9 +108,7 @@ Angualr 5는 [서비스 워커(service worker)](https://github.com/angular/angul
     - [Angular Service Workers](http://pascalprecht.github.io/slides/angular-and-service-workers/#/)
 
 - **컴파일러 향상**
-  - 컴파일러는 타입스크립트 2.4 이상에서만 지원됨(beta.7)
-    - TS 2.4 이상을 사용함으로써 템플릿 타입 검사(template type checking)가 가능하게 됨
-
+  - TS 2.4 이상을 사용함으로써 템플릿 타입 검사(template type checking)가 가능하게 됨
   - 여러 exportAs 이름을 사용할 수 있게됨([#18723](https://github.com/angular/angular/issues/18723)) ([7ec28fe](https://github.com/angular/angular/commit/7ec28fe))(beta.6)
 
     ```
@@ -177,19 +176,24 @@ Angualr 5는 [서비스 워커(service worker)](https://github.com/angular/angul
 
 ### 성능 개선점
 
-- **빌드 옵티마이저**
+- 애니메이션
+
+  - AST classes를 제거해 번들 사이즈의 용량을 줄임 ([#19539](https://github.com/angular/angular/issues/19539)) ([d5c9c5f](https://github.com/angular/angular/commit/d5c9c5f))(rc.2)
+
+- 새로운 빌드 옵티마이저로 업데이트 됨
+
+  - 불필요한 코드를 제거해 애플리케이션의 사이즈를 줄임
 
   - Angular CLI는 옵티마이저를 기본 옵션으로 사용하므로 [번들 사이즈가 감소](https://next.angular.io/guide/webpack)됐습니다.
-  - AST classes를 제거해 번들 사이즈의 용량을 줄임 ([#19539](https://github.com/angular/angular/issues/19539)) ([d5c9c5f](https://github.com/angular/angular/commit/d5c9c5f))(rc.2)
 
 - Angular Universal State Transfer API와 DOM 지원
 
   - ServerTransferStateModule가 추가 됨에 따라 HTTP 재요청 없이 서버의 상태를 클라이언트로 전달할 수 있게 됐습니다.
 
-- Zone 스피드 개선
+- 커스텀 존(zone)을 이용한 애플리케이션의 부트스트랩 지원([#17672](https://github.com/angular/angular/issues/17672)) ([344a5ca](https://github.com/angular/angular/commit/344a5ca))
 
-  - Zone 스피드가 개선 됐고 더군다나 성능을 갖춘 애플리케이션을 개발 하기 위해 zones을 사용하지 않게할 수 있습니다.
-  - ngZone으로 noop을 사용해 애플리케이션을 bootstrap하면 됩니다.
+  - 성능을 갖춘 애플리케이션을 개발 하기 위해 zones을 사용하지 않을 수 있습니다.
+    - ngZone으로 noop을 사용해 애플리케이션을 bootstrap하면 됩니다.
 
 - core가 [addEventListener](https://github.com/angular/angular/commit/6279e50)를 사용하도록 해 렌더링 속도를 개선함
 
@@ -207,8 +211,6 @@ Angualr 5는 [서비스 워커(service worker)](https://github.com/angular/angul
 ### 기타
 
 - [Material 디자인 컴포넌트](https://material.angular.io/)가 서버 사이드 렌더링에서 호환됨
-- 새로운 build-optimizer로 업데이트 됨
-  - 불필요한 코드를 제거해 애플리케이션의 사이즈를 줄임
 - 에러 메시지의 개선, 테스팅 개선, hybrid 애플리케이션에 대한 성능 향상, 캐싱, 로깅, [XSRF](https://next.angular.io/api/http/XSRFStrategy), 등에 대한 개선
 - 성능 개선(performance improvements) 통계
   - 5.0.0-rc에서는 총 10건의 성능 개선
@@ -231,6 +233,3 @@ Angualr 5는 [서비스 워커(service worker)](https://github.com/angular/angul
 
 
 - Angular 5의 문서(https://next.angular.io/docs)
-
-
-
