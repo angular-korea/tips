@@ -176,7 +176,12 @@ Angualr 5는 [서비스 워커(service worker)](https://github.com/angular/angul
 - 커스텀 존(zone)을 이용한 애플리케이션의 부트스트랩 지원([#17672](https://github.com/angular/angular/issues/17672)) ([344a5ca](https://github.com/angular/angular/commit/344a5ca))
 
   - 성능을 갖춘 애플리케이션을 개발 하기 위해 zones을 사용하지 않을 수 있습니다.
-    - ngZone으로 noop을 사용해 애플리케이션을 bootstrap하면 됩니다.
+
+    - ngZone 속성에 noop을 사용해 애플리케이션을 bootstrap하면 됩니다.
+
+      ```
+      platformBrowserDynamic().bootstrapModule(AppModule, {ngZone: 'noop'}).then( ref => {} );
+      ```
 
 - core가 [addEventListener](https://github.com/angular/angular/commit/6279e50)를 사용하도록 해 렌더링 속도를 개선함
 
@@ -196,6 +201,8 @@ Angualr 5는 [서비스 워커(service worker)](https://github.com/angular/angul
   - 변경전 : ReflectiveInjector.resolveAndCreate(providers);
   - 변경후 : Injector.create(providers);
 - OpaqueToken이 deprecated 됨(beta.6)
+- @angular/http 라이브러리가 deprecated됨
+  - [HttpClient](https://next.angular.io/api/common/http/HttpClient)는 @angular/common 패키지를 통해 제공됨
 - router : [RouterOutlet](https://next.angular.io/api/router/RouterOutlet) 속성인 `locationInjector` 와 `locationFactoryResolver`가 deprecated  됨(beta.7)
 - v4에서 사용되던 NgFor가 deprecated되고 [NgForOf](https://next.angular.io/api/common/NgForOf)를 사용해야 함(beta.5)
 - NgTemplateOutlet#ngOutletContext가 deprecated됨 Testability#findProviders를 사용해야 함(beta.5)
