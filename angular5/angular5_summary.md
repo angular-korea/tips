@@ -65,7 +65,7 @@ Angualr 5는 [서비스 워커(service worker)](https://github.com/angular/angul
     ```
 
 - Form에서 [updateOn](https://next.angular.io/api/forms/FormControl) 설정시 blur와 submit 옵션을 설정할 수 있게 됨(beta.3)
-  - updateOn 옵션에 blur와 submit  값을 설정해 값 변경이 일어날 때마다 검증을 수행할 수 있게 됐습니다.
+  - updateOn 옵션에 blur와 submit  값을 설정해 값 해당 이벤트가 일어날 때마다 검증을 수행할 수 있게 됨
 
     ```
     const c = new FormControl('', { updateOn: 'blur' });
@@ -121,6 +121,7 @@ Angualr 5는 [서비스 워커(service worker)](https://github.com/angular/angul
   - 더이상 초기화를 위한 폴리필을 사용하지 않아도 됨
   - angular는 en-US 언어에 대한 locale 데이터를 디폴트로 포함함
   - LOCALE_ID값을 다른 locale로 변경하면 해당 언어에 대한 locale 데이터를 가져와야함
+  - 새로운 파이프가 아닌 기존 파이프를 사용하려면 DeprecatedI18NPipesModule를 이용함
 
 - 파이프([Plural](https://next.angular.io/api/common/I18nPluralPipe),[decimal](https://next.angular.io/api/common/DecimalPipe), [percent](https://next.angular.io/api/common/PercentPipe)/[currency](https://next.angular.io/api/common/CurrencyPipe))에 locale 옵션이 추가 됨(beta.5)
 
